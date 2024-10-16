@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CounterState } from "../../@interfaces/common.interface";
+import { CounterType } from "../../@interfaces/common.interface";
 
-const initialState: CounterState[] = [
+const initialState: CounterType[] = [
   {
     id: 1,
-    value: 0,
+    value: 10,
   },
   {
-    id: 1,
+    id: 2,
     value: 0,
   },
 ];

@@ -1,25 +1,18 @@
-import React, { useState } from "react";
 import Count from "./Count";
 import Button from "./Button";
+import { ICounterPops } from "../@interfaces/common.interface";
 
-const Counter: React.FC = () => {
-  const [count, setCount] = useState<number>(0);
-  const handleIncrement = () => {
-    setCount((prevCount) => prevCount + 1);
-  };
-  const handleDecrement = () => {
-    setCount((prevCount) => prevCount - 1);
-  };
+const Counter: React.FC<ICounterPops> = ({ count, onIncrement, onDecrement }) => {
   return (
     <div className="bg-white p-4 rounded flex flex-col items-center justify-center space-y-5">
       <div>
         <Count count={count} />
       </div>
       <div className="flex space-x-6 py-5 ">
-        <Button handler={handleIncrement} className="px-3 py-2 bg-blue-500 rounded shadow text-white">
+        <Button handler={onIncrement} className="px-3 py-2 bg-blue-500 rounded shadow text-white">
           Increment
         </Button>
-        <Button handler={handleDecrement}>Decrement</Button>
+        <Button handler={onDecrement}>Decrement</Button>
       </div>
     </div>
   );
