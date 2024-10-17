@@ -12,3 +12,9 @@ export interface ICounterPops {
   onIncrement: () => void;
   onDecrement: () => void;
 }
+export interface IInitialState {
+  posts: [];
+  isLoading: boolean;
+  isError: boolean;
+  error: any;
+}

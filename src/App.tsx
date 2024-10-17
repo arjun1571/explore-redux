@@ -3,6 +3,7 @@ import "./App.css";
 import Counter from "./components/Counter";
 import { TotalCount } from "./components/TotalCount";
 import { decrement, increment } from "./featuers/counters/counterSlice";
+import Post from "./components/Post";
 
 function App() {
   const counters = useSelector((state: any) => state?.counters);
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-gray-100 h-screen w-screen">
+      <div className="bg-gray-100  w-screen">
         <h1 className="text-3xl font-bold text-center py-5">Counter Application</h1>
         <div className="max-w-md mx-auto mt-10 space-y-5">
           {counters.map((counter: any) => (
@@ -33,6 +34,8 @@ function App() {
           ))}
 
           <TotalCount totalCount={totalCount} />
+
+          <Post />
         </div>
       </div>
     </>
