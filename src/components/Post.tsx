@@ -19,7 +19,7 @@ const Post = () => {
     content = <p>{error}</p>;
   }
   if (!loading && !isError && posts.length === 0) {
-    content = <p>No posts </p>;
+    content = <p>No posts available</p>;
   }
   if (!loading && !isError && posts.length > 0) {
     content = (
